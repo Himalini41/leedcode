@@ -1,10 +1,10 @@
 class Solution:
-    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        v=[]
-        nums1=list(set(nums1))
-        nums2=list(set(nums2))
-        for i in nums1:
-            for j in nums2:
-                if i==j:
-                    v.append(i)
-        return v
+    def isSubsequence(self, s: str, t: str) -> bool:
+        c=0
+        for i in t:
+            if c<len(s) and i==s[c]:
+                c+=1
+        if c==len(s):
+            return True
+        else:
+            return False
