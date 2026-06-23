@@ -3,7 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        b=sorted(nums1[:m]+nums2)
-        for i in range (len(b)):
-            nums1[i]=b[i]
-        
+        m=nums1[0:m]
+        n=nums2[0:n]
+        g=sorted(n+m)
+        for i in range(len(g)):
+            nums1[i]=g[i]
+       
